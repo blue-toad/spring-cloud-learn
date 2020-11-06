@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="common-api" />
+        <module name="payment8002" />
+        <module name="consumer-feign" />
+        <module name="consumer-order" />
+        <module name="eureka-server" />
+        <module name="provider-payment" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cloud-api-common" target="1.8" />
+      <module name="eureka-server7002" target="1.8" />
+      <module name="payment8002" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="provider-payment" options="" />
+    </option>
+  </component>
+</project>

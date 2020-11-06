@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.kinopio.springcloud.dao.PaymentDao">
+
+    <select id="getPaymentById" resultType="Payment" >
+		SELECT * FROM payment where id = #{id}
+	</select>
+
+<!--    MyBatis如何获取插入记录的自增长字段值:-->
+<!--    在Mybatis Mapper文件中添加属性“useGeneratedKeys”和“keyProperty”，其中keyProperty是Java对象的属性名！-->
+    <insert id="creatPayment" parameterType="Payment" useGeneratedKeys="true" >
+        insert into payment (serial) values (#{serial});
+    </insert>
+
+</mapper>

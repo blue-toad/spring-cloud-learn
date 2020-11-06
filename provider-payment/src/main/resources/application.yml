@@ -1,0 +1,27 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: payment-service  #根据这个区分是哪个服务
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/cloud?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: admin123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  thymeleaf:
+    cache: false
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.kinopio.springcloud.entity
+
+eureka:
+  instance:
+    instance-id: payment1     #根据这个区分是运行这个服务的哪个机器
+  client:
+    register-with-eureka: true #默认为true
+    fetch-registry: true #默认为true
+    service-url:
+      # 俩个eureka server会互相复制信息 所以这里只指向了一个服务
+      defaultZone: http://localhost:7001/eureka,http://localhost:7002/eureka
+
