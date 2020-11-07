@@ -3,14 +3,20 @@ package com.kinopio.springcloud.controller;
 import com.kinopio.springcloud.entity.CommonResult;
 import com.kinopio.springcloud.entity.Payment;
 import com.kinopio.springcloud.service.PaymentService;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @Slf4j
 public class PaymentController {
+    @Value("${server.port}")
+    private Integer port;  //获得端口号
     @Autowired
     private PaymentService paymentService;
 
@@ -21,9 +27,9 @@ public class PaymentController {
         Integer result = paymentService.creatPayment(payment);
         log.info("插入信息{}结果{}", payment, result);
         if (result > 0){
-            return new CommonResult(200, "插入数据库成功", result);
+            return new CommonResult(200, "插入数据库成功" + port, result);
         }else {
-            return new CommonResult(404, "插入失败");
+            return new CommonResult(404, "插入失败" + port);
         }
     }
 
@@ -32,9 +38,9 @@ public class PaymentController {
         Payment result = paymentService.getPaymentById(id);
         log.info("查询id{}结果{}", id, result);
         if (result != null){
-            return new CommonResult(200, "查询数据库成功", result);
+            return new CommonResult(200, "查询数据库成功" + port, result);
         }else {
-            return new CommonResult(404, "查询失败");
+            return new CommonResult(404, "查询失败" + port);
         }
     }
 

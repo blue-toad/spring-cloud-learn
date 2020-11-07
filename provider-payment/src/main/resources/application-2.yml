@@ -9,7 +9,7 @@ spring:
   application:
     name: payment-service  #根据这个区分是哪个服务
   datasource:
-    url: jdbc:mysql://127.0.0.1:3306/cloud?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    url: jdbc:mysql://127.0.0.1:3306/cloud?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
     username: root
     password: admin123
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -27,5 +27,6 @@ eureka:
     fetch-registry: true #默认为true
     service-url:
       # 俩个eureka server会互相复制信息 所以这里只指向了一个服务
+      # 这个必须写两个
       defaultZone: http://localhost:7001/eureka,http://localhost:7002/eureka
 
