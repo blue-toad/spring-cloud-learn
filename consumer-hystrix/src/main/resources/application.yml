@@ -1,0 +1,16 @@
+server:
+  port: 803
+
+spring:
+  application:
+    name: consumer-hystrix  #根据这个区分是哪个服务
+eureka:
+  client:
+    register-with-eureka: true #默认为true
+    fetch-registry: true #默认为true
+    service-url:
+      defaultZone: http://localhost:7001/eureka,http://localhost:7002/eureka
+
+feign:
+  hystrix:
+    enabled: true   #开启openfeign中的hystrix

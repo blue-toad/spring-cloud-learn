@@ -5,6 +5,8 @@
     <file url="file://$PROJECT_DIR$/common-api/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/consumer-feign/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/consumer-feign/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consumer-hystrix/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/consumer-hystrix/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/consumer-order/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/consumer-order/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka-server/src/main/java" charset="UTF-8" />

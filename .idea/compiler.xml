@@ -9,10 +9,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="common-api" />
         <module name="payment8002" />
+        <module name="consumer-hystrix" />
         <module name="consumer-feign" />
         <module name="consumer-order" />
-        <module name="eureka-server" />
         <module name="provider-payment" />
+        <module name="eureka-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8" />
