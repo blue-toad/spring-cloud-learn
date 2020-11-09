@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-// 服务降级
 @RestController
 @Slf4j
 @DefaultProperties(defaultFallback = "hystrixGlobalHandler")
@@ -25,10 +24,10 @@ public class HystrixController {
     @GetMapping("/consumer/payment/get/{id}")
 //    @HystrixCommand(fallbackMethod = "hystrixHandler", commandProperties = {
 //            @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "800")
-//    })这里默认的超时时间是1s
+//    })
     @HystrixCommand
     public CommonResult<Payment> hystrixGet(@PathVariable Long id){
-        //log.info("访问");
+        log.info("访问");
         return service.getPaymentById(id);
     }
 //    部分
@@ -47,7 +46,7 @@ public class HystrixController {
     // 第一种使用 hystrix中的
     // @DefaultProperties(defaultFallback = "hystrixGlobalHandler")
     // @HystrixCommand
-    // 第二种使用frign中内置的hystrix 需要修改yml
+    // 第二种使用frign中内置的hystrix
     // 在service层中实现接口来订制fallback方法
     // 感觉这个不是很好 使用第一种方法
 }
