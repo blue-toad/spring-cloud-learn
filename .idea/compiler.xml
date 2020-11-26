@@ -14,6 +14,7 @@
         <module name="consumer-order" />
         <module name="provider-payment" />
         <module name="eureka-server" />
+        <module name="gateway" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8" />

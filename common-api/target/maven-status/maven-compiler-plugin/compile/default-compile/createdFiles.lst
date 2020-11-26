@@ -1,2 +1,2 @@
-com/kinopio/springcloud/entity/CommonResult.class
-com/kinopio/springcloud/entity/Payment.class
+com\kinopio\springcloud\entity\Payment.class
+com\kinopio\springcloud\entity\CommonResult.class

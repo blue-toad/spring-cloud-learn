@@ -1,0 +1,27 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: cloud-gateway  #根据这个区分是哪个服务
+  cloud:
+    gateway:
+      routes:
+        - id: uri001  #路由的id 可随便起 建议配合服务名
+          uri: lb://CONSUMER-HYSTRIX  #跳转到的地址 这里指向Hystrix消费者
+          predicates:        #这里都是断言 符合特定要求即可通过
+            - Path=/consumer/payment/get/**
+           #- After=2020-02-21T15:51:37.485+08:00[Asia/Shanghai]
+           #- Cookie=username,zzyy
+           #- Header=X-Request-Id, \d+  # 请求头要有X-Request-Id属性并且值为整数的正则表达式
+          filters:
+            - AddRequestHeader=X-Request-red,blue # 添加一个请求头
+
+
+# 测试网址 http://localhost:9527/consumer/payment/get/1
+eureka:
+  client:
+    register-with-eureka: true #默认为true
+    fetch-registry: true #默认为true
+    service-url:
+      defaultZone: http://localhost:7001/eureka,http://localhost:7002/eureka
