@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Payment8001" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <module name="provider-payment" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="com.kinopio.springcloud.Payment8001Application" />
+    <option name="ALTERNATIVE_JRE_PATH" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

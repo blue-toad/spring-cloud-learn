@@ -13,8 +13,10 @@
         <module name="consumer-feign" />
         <module name="consumer-order" />
         <module name="provider-payment" />
+        <module name="consumer-hystrix-springConfig" />
         <module name="eureka-server" />
         <module name="gateway" />
+        <module name="config-center" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8" />

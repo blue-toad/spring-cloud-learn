@@ -1,0 +1,33 @@
+server:
+  port: 804
+
+config:
+  info: error
+
+spring:
+  application:
+    name: consumer-springconfig  #根据这个区分是哪个服务
+  cloud:
+    config:
+#      配置文件名
+      name: application
+      discovery:
+#        启动服务发现 默认为false
+        enabled: true
+        service-id: config-center
+#      文件后缀 dev prod 这样的 本项目中的其他文件用的后缀为2
+#      profile:
+#      分枝名
+#      label:
+# 测试网址 http://localhost:804/configTest
+
+eureka:
+  client:
+    register-with-eureka: true #默认为true
+    fetch-registry: true #默认为true
+    service-url:
+      defaultZone: http://localhost:7001/eureka,http://localhost:7002/eureka
+
+#feign:
+#  hystrix:
+#    enabled: true   #开启openfeign中的hystrix

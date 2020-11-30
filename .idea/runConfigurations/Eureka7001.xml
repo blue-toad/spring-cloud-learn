@@ -1,0 +1,16 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Eureka7001" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <module name="eureka-server" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="com.kinopio.springcloud.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <option name="SPRING_BOOT_MAIN_CLASS" value="com.kinopio.springcloud.Eureka7001Application" />
+    <option name="ALTERNATIVE_JRE_PATH" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
