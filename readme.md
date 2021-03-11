@@ -33,11 +33,11 @@
 
 **二、创建子模块**
 
-![](.\pictures\sc的3.png)
+![](https://github.com/blue-toad/spring-cloud-learn/raw/main/pictures/sc%E7%9A%843.png)
 
 
 
-![](.\pictures\image-20201016093759732.png)
+![](https://github.com/blue-toad/spring-cloud-learn/raw/main/pictures/image-20201016093759732.png)
 
 
 
@@ -65,7 +65,7 @@ mvn install 命令发布包
 
 # 第一章：服务注册与发现Eureka
 
- ![](.\pictures\Eureka的4.png)
+ ![](https://github.com/blue-toad/spring-cloud-learn/raw/main/pictures/Eureka%E7%9A%844.png)
 
 
 
@@ -73,7 +73,7 @@ mvn install 命令发布包
 
 ​		互相注册
 
-![](.\pictures\Eureka的13.png)
+![](https://github.com/blue-toad/spring-cloud-learn/raw/main/pictures/Eureka%E7%9A%8413.png)
 
 
 
@@ -208,7 +208,7 @@ eureka:
 
 
 
-![cap](.\pictures\cap.jpg)
+![cap](https://github.com/blue-toad/spring-cloud-learn/raw/main/pictures/cap.jpg)
 
 
 
@@ -234,7 +234,7 @@ zookeeper、consul属于cp
 
 默认我们使用eureka的新版本时,它默认集成了ribbon:
 
-![image-20210311150007069](.\pictures\image-20210311150007069.png)
+![image-20210311150007069](https://github.com/blue-toad/spring-cloud-learn/raw/main/pictures/image-20210311150007069.png)
 
 
 
@@ -294,7 +294,7 @@ public class MyRibbon {
 
 **3、在主启动类上加一个注解**
 
-![](.\pictures\Ribbon的18.png)
+![](https://github.com/blue-toad/spring-cloud-learn/raw/main/pictures/Ribbon%E7%9A%8418.png)
 
 
 
@@ -532,7 +532,7 @@ public class HystrixController {
 
 熔断的触发条件可以依据不同的场景有所不同，比如统计一个时间窗口内失败的调用次数。
 
-![img](.\pictures\907280-20180711164915812-924048716.png)
+![img](https://github.com/blue-toad/spring-cloud-learn/raw/main/pictures/907280-20180711164915812-924048716.png)
 
 
 
@@ -589,7 +589,7 @@ Hystrix Dashboard，它主要用来实时监控Hystrix的各项指标信息。�
 
 大致效果如图
 
-![image-20210311163739571](.\pictures\image-20210311163739571.png)
+![image-20210311163739571](https://github.com/blue-toad/spring-cloud-learn/raw/main/pictures/image-20210311163739571.png)
 
 
 
@@ -614,7 +614,7 @@ Hystrix Dashboard，它主要用来实时监控Hystrix的各项指标信息。�
 
 总结：web请求，通过一些匹配条件，定位到真正的服务节点。并在这个转发过程的前后，进行一些精细化控制。predicate就是匹配条件，而filter，就可以理解为一个无所不能的拦截器。有了这两个元素，再加上目标URI，就可以实现具体的路由了。
 
-![在这里插入图片描述](.\pictures\1240)
+![在这里插入图片描述](https://github.com/blue-toad/spring-cloud-learn/raw/main/pictures/1240)
 
 
 
@@ -1005,7 +1005,7 @@ management:
 
 在需要读取配置的类上增加 @RefreshScope 注解，我们是 controller 中使用配置，所以加在 controller 中
 
-![](.\pictures\springconfig的24.png)
+![](https://github.com/blue-toad/spring-cloud-learn/raw/main/pictures/springconfig%E7%9A%8424.png)
 
 
 
@@ -1043,7 +1043,7 @@ management:
 
 这时候我们就不要忘记消息队列的发布订阅模型。让所有为服务来订阅这个事件，当这个事件发生改变了，就可以通知所有微服务去更新它们的内存中的配置信息。这时Bus消息总线就能解决，你只需要在springcloud Config Server端发出refresh，就可以触发所有微服务更新了。
 
-![img](.\pictures\1202638-20180521203126866-1299643942.png)
+![img](https://github.com/blue-toad/spring-cloud-learn/raw/main/pictures/1202638-20180521203126866-1299643942.png)
 
 
 
@@ -1144,7 +1144,7 @@ curl -X POST http://localhost:8081/actuator/bus-refresh
 
 **业务流程:**
 
-![image-20210308172450601](.\pictures\image-20210308172450601.png)
+![image-20210308172450601](https://github.com/blue-toad/spring-cloud-learn/raw/main/pictures/image-20210308172450601.png)
 
 
 
