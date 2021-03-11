@@ -1,0 +1,26 @@
+server:
+  port: 8008
+
+spring:
+  application:
+    name: sleuth-test  #根据这个区分是哪个服务
+
+    #链路监控的配置
+  zipkin:
+    base-url: http://localhost:9411
+  sleuth:
+    sampler:
+      # 采样频率 0-1 之间 1 表示采样全部
+      probability: 1
+
+
+eureka:
+  instance:
+    instance-id: payment1     #根据这个区分是运行这个服务的哪个机器
+  client:
+    register-with-eureka: true #默认为true
+    fetch-registry: true #默认为true
+    service-url:
+      #这个必须写两个
+      defaultZone: http://localhost:7001/eureka,http://localhost:7002/eureka
+

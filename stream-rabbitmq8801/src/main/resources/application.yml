@@ -1,0 +1,41 @@
+server:
+  port: 8801
+
+spring:
+  application:
+    name: stream-rabbitmq-provider  #根据这个区分是哪个服务
+
+  rabbitmq:
+    host: localhost
+    port: 5672   # 默认端口
+    username: guest
+    password: guest
+
+  cloud:
+    stream:
+
+      bindings:
+        myOutput:
+          destination: myExchange     # 交换机exchange名称
+          contentType: application/json
+          group: Number1
+        myInput:
+          destination: myExchange
+          contentType: application/json
+          group: Number1
+
+      binders:
+        mybinder:
+          type: rabbit
+
+
+
+
+
+
+eureka:
+  client:
+    register-with-eureka: true #默认为true
+    fetch-registry: true #默认为true
+    service-url:
+      defaultZone: http://localhost:7001/eureka,http://localhost:7002/eureka

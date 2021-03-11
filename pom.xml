@@ -19,6 +19,8 @@
         <module>gateway</module>
         <module>consumer-hystrix-springConfig</module>
         <module>config-center</module>
+        <module>stream-rabbitmq8801</module>
+        <module>sleuth</module>
     </modules>
     <!--统一管理jar包版本-->
     <properties>

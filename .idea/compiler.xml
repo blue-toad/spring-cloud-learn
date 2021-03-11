@@ -10,9 +10,11 @@
         <module name="common-api" />
         <module name="payment8002" />
         <module name="consumer-hystrix" />
+        <module name="sleuth" />
         <module name="consumer-feign" />
         <module name="consumer-order" />
         <module name="provider-payment" />
+        <module name="stream-rabbitmq8801" />
         <module name="consumer-hystrix-springConfig" />
         <module name="eureka-server" />
         <module name="gateway" />
